@@ -30,9 +30,28 @@ type public FileObjectStore<'T>(folder: IFolder, fileName: string, serializer: I
                     use! readStream = Async.AwaitTask <| file.OpenAsync(FileAccess.Read)
 
                     return serializer.DeserializeAsync readStream                        
-                }            
-            load() |> Async.RunSynchronously
-     
+                }
+                
+            let loadFromBack() =
+                async{
+
+                    let backupFileName = Path.GetFileNameWithoutExtension(fileName) + ".bak"
+
+                    let! file = Async.AwaitTask <| folder.GetFileAsync backupFileName
+
+                    do! file.CopyAsync(PortablePath.Combine(folder.Path, fileName), NameCollisionOption.ReplaceExisting) |> Async.AwaitIAsyncResult |> Async.Ignore
+                    
+                    return load() |> Async.RunSynchronously
+                }
+                             
+            try
+                load() |> Async.RunSynchronously
+            with
+            | :? System.Xml.XmlException
+            | :? System.Runtime.Serialization.SerializationException ->
+                loadFromBack() |> Async.RunSynchronously
+            | _ -> reraise()
+
         override x.SaveAsync (objectGraph: 'T) =
             let save (objectGraph) = 
                 async {
