@@ -48,6 +48,7 @@
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
   <ItemGroup>
+    <Compile Include="FileObjectStore.fs" />
     <Compile Include="FileEntityStore.fs" />
     <None Include="Script.fsx" />
     <Content Include="packages.config" />

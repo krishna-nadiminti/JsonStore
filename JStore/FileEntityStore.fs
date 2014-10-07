@@ -12,5 +12,6 @@ type public EntityTypeInfo (``type``: Type) =
         with get() = "Money.Model." + x.Type.Name + ".dat"
 
 
-type public FileEntityStore(folder: IFolder, entityType: IEnumerable<EntityTypeInfo>) = 
-    member this.X = "F#"
+type public FileEntityStore = class end
+//    static member CreateFileStore(folder: IFolder, entitytype: EntityTypeInfo) = 
+//        store = Activator.CreateInstance()
