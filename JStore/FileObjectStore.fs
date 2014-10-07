@@ -21,8 +21,17 @@ type public FileObjectStore<'T>(folder: IFolder, fileName: string, serializer: I
     
     interface IObjectStore<'T> with
         
-        override x.LoadAsync =
-            Task.Factory.StartNew(fun () -> ignore())
+        override x.LoadAsync =           
+            let load() = 
+                async {
+                    
+                    let! file = Async.AwaitTask <| folder.GetFileAsync fileName
+
+                    use! readStream = Async.AwaitTask <| file.OpenAsync(FileAccess.Read)
+
+                    return serializer.DeserializeAsync readStream                        
+                }            
+            load() |> Async.RunSynchronously
      
         override x.SaveAsync (objectGraph: 'T) =
             let save (objectGraph) = 
