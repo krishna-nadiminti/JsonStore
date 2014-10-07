@@ -15,10 +15,19 @@ type public EntityTypeInfo (``type``: Type) =
 
 
 type public FileEntityStore =
-    static member CreateFileStore(folder: IFolder, entityType: EntityTypeInfo) =
+
+    let findObjectStore = ()
+
+    member x.SaveAsync<'T when 'T :> EntityBase>(entities: EntitySet<'T>) =
+        let fileStore = findObjectStore<'T>()
+        Async.AwaitTask <| fileStore.SaveAsync(entities)
+
+    static member private CreateFileStore(folder: IFolder, entityType: EntityTypeInfo) =
      
         let entitySetType = typedefof<EntitySet<_>>.MakeGenericType(entityType.Type)
 
         let fileObjStoreType = typedefof<FileObjectStore<_>>.MakeGenericType(entitySetType)
 
         Activator.CreateInstance(fileObjStoreType, folder, entityType.Filename)
+
+    
