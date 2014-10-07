@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F1AC77
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "JStore", "JStore\JStore.fsproj", "{8D743A6E-7E53-42BF-95F2-3276B4DD6BC9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonStore.Model", "JsonStore.Model\JsonStore.Model.csproj", "{BC3FB75E-7F81-4200-A8F3-66B47381AF77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonStore.Common", "JsonStore.Common\JsonStore.Common.csproj", "{587A9DAE-2BC6-44CE-B28F-AA138F19BC72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +32,14 @@ Global
 		{8D743A6E-7E53-42BF-95F2-3276B4DD6BC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D743A6E-7E53-42BF-95F2-3276B4DD6BC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D743A6E-7E53-42BF-95F2-3276B4DD6BC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC3FB75E-7F81-4200-A8F3-66B47381AF77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC3FB75E-7F81-4200-A8F3-66B47381AF77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC3FB75E-7F81-4200-A8F3-66B47381AF77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC3FB75E-7F81-4200-A8F3-66B47381AF77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{587A9DAE-2BC6-44CE-B28F-AA138F19BC72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{587A9DAE-2BC6-44CE-B28F-AA138F19BC72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{587A9DAE-2BC6-44CE-B28F-AA138F19BC72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{587A9DAE-2BC6-44CE-B28F-AA138F19BC72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
