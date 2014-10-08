@@ -1,0 +1,15 @@
+﻿using System.Threading.Tasks;
+
+<<<<<<< HEAD
+namespace Money.UI.Services
+=======
+namespace JsonStore
+>>>>>>> 9e48c805dec2b901cadabd18510e74aa55f5a64a
+{
+    public interface IObjectSerializer<T>
+    {
+        Task<T> DeserializeAsync(System.IO.Stream inStream);
+
+        Task SerializeAsync(System.IO.Stream outStream, object obj);
+    }
+}

@@ -1,0 +1,19 @@
+﻿using System.Threading.Tasks;
+
+<<<<<<< HEAD
+namespace Money.DataAccess
+=======
+namespace JsonStore.DataAcces
+>>>>>>> 9e48c805dec2b901cadabd18510e74aa55f5a64a
+{
+    public interface IReadOnlyStore<T>
+    {
+        Task<T> LoadAsync();
+    }
+
+    public interface IObjectStore<T> : IReadOnlyStore<T>
+    {
+        Task<bool> SaveAsync(T objectGraph);
+    }
+
+}
