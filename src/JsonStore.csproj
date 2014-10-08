@@ -36,12 +36,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DateTimeExtensions.cs" />
+    <Compile Include="ExpressionExtensions.cs" />
     <Compile Include="FileEntityStore.cs" />
     <Compile Include="FileObjectStore.cs" />
     <Compile Include="IObjectSerializer.cs" />
     <Compile Include="IObjectStore.cs" />
     <Compile Include="JsonObjectSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MetroLogExtensions.cs" />
+    <Compile Include="Model\AuditInfo.cs" />
+    <Compile Include="Model\BindableBase.cs" />
+    <Compile Include="Model\DbMetadata.cs" />
+    <Compile Include="Model\EntityBase.cs" />
+    <Compile Include="Model\EntityMetaData.cs" />
+    <Compile Include="Model\EntitySet.cs" />
+    <Compile Include="Model\EntitySet.list.cs">
+      <DependentUpon>EntitySet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\IEntitySet.cs" />
+    <Compile Include="Model\MergeResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MetroLog">
