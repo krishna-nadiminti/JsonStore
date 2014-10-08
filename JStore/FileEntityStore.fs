@@ -16,11 +16,11 @@ type public EntityTypeInfo (``type``: Type) =
 
 type public FileEntityStore =
 
-    let findObjectStore = ()
-
-    member x.SaveAsync<'T when 'T :> EntityBase>(entities: EntitySet<'T>) =
-        let fileStore = findObjectStore<'T>()
-        Async.AwaitTask <| fileStore.SaveAsync(entities)
+//    let findObjectStore<'T> = ()
+//
+//    member x.SaveAsync<'T when 'T :> EntityBase>(entities: EntitySet<'T>) =
+//        let fileStore = findObjectStore<'T>()
+//        Async.AwaitTask <| fileStore.SaveAsync(entities)
 
     static member private CreateFileStore(folder: IFolder, entityType: EntityTypeInfo) =
      

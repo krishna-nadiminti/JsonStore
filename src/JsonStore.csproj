@@ -56,7 +56,6 @@
     </Compile>
     <Compile Include="Model\IEntitySet.cs" />
     <Compile Include="Model\MergeResult.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
