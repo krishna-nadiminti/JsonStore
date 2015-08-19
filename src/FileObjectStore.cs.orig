@@ -1,6 +1,11 @@
 ﻿using MetroLog;
+<<<<<<< HEAD
 using Money.Extensions;
 using Money.UI.Services;
+=======
+using JsonStore.Extensions;
+using JsonStore;
+>>>>>>> 9e48c805dec2b901cadabd18510e74aa55f5a64a
 using PCLStorage;
 using System;
 using System.IO;
@@ -8,7 +13,11 @@ using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using System.Xml;
 
+<<<<<<< HEAD
 namespace Money.DataAccess
+=======
+namespace JsonStore.DataAcces
+>>>>>>> 9e48c805dec2b901cadabd18510e74aa55f5a64a
 {
     public class FileObjectStore<T> : IObjectStore<T>
     {

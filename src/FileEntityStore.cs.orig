@@ -1,12 +1,21 @@
+<<<<<<< HEAD
 ﻿using Money.DataAccess;
 using Money.Model;
+=======
+﻿using JsonStore.DataAcces;
+using JsonStore.Model;
+>>>>>>> 9e48c805dec2b901cadabd18510e74aa55f5a64a
 using PCLStorage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+<<<<<<< HEAD
 namespace Money.Data
+=======
+namespace JsonStore.Data
+>>>>>>> 9e48c805dec2b901cadabd18510e74aa55f5a64a
 {
     struct EntityTypeInfo
     {

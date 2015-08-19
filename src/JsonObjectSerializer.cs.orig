@@ -2,10 +2,17 @@
 using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
+<<<<<<< HEAD
 using Money.UI.Services;
 using Newtonsoft.Json;
 
 namespace Money.DataAccess
+=======
+using JsonStore;
+using Newtonsoft.Json;
+
+namespace JsonStore.DataAcces
+>>>>>>> 9e48c805dec2b901cadabd18510e74aa55f5a64a
 {
     public class JsonObjectSerializer<T> : IObjectSerializer<T>
     {
